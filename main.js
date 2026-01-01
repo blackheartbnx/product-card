@@ -38,9 +38,9 @@ function openGoogle() {
 
 const outputLogButton = document.querySelector('#output-console-log');
 
-outputLogButton.addEventListener('click', () => outputConsoleLog('ДЗ №4'))
+outputLogButton.addEventListener('click', () => outputLog('ДЗ №4'))
 
-function outputConsoleLog(message) {
+function outputLog(message) {
   alert(message)
   console.log(message)
 }
