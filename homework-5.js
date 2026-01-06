@@ -1,30 +1,30 @@
 // Домашнее задание № 5
 
-function consoleOutput(city, temp) {
+function outputConsole(city, temp) {
     console.log(`Сейчас в ${city} температура  — ${temp} градусов по Цельсию`)
 }
 
-consoleOutput("Москве", 10)
+outputConsole("Москве", 10)
 
-const speedOfLight = 1079252848.8
-function speedChecker(speed) {
-    if (speed > speedOfLight) {
+const speed_of_light = 1079252848.8
+function checkSpeed(speed) {
+    if (speed > speed_of_light) {
         console.log("Сверхсветовая скорость")
 
-    } else if (speed < speedOfLight) {
+    } else if (speed < speed_of_light) {
         console.log("Субсветовая  скорость")
 
     } else {
         console.log("Скорость света")
     }
 }
-speedChecker(2079252848)
-speedChecker(100071488)
-speedChecker(1079252848.8)
+checkSpeed(2079252848)
+checkSpeed(100071488)
+checkSpeed(1079252848.8)
 
 let product = "Боксерские перчатки"
 let price = 20
-function buyProduct(budget) {
+function purchaseProduct(budget) {
     if (budget > price) {
         console.log("Боксёрские перчатки приобретены. Спасибо за покупку!")
     } else if (budget < price) {
@@ -32,8 +32,8 @@ function buyProduct(budget) {
         console.log(`Вам не хватает ${diff}$, пополните баланс`)
     }
 }
-buyProduct(21)
-buyProduct(19)
+purchaseProduct(21)
+purchaseProduct(19)
 
 function checkAge(age) { }
 const character = "Jack"
