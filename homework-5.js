@@ -1,26 +1,26 @@
 // Домашнее задание № 5
 
-function outputConsole(city, temp) {
+function outputCityTemperature(city, temp) {
     console.log(`Сейчас в ${city} температура  — ${temp} градусов по Цельсию`)
 }
 
-outputConsole("Москве", 10)
+outputCityTemperature("Москве", 10)
 
-const speed_of_light = 1079252848.8
-function checkSpeed(speed) {
-    if (speed > speed_of_light) {
+const SPEEDOFLIGHT = 1079252848.8
+function compareLightSpeed(speed) {
+    if (speed > SPEEDOFLIGHT) {
         console.log("Сверхсветовая скорость")
 
-    } else if (speed < speed_of_light) {
+    } else if (speed < SPEEDOFLIGHT) {
         console.log("Субсветовая  скорость")
 
     } else {
         console.log("Скорость света")
     }
 }
-checkSpeed(2079252848)
-checkSpeed(100071488)
-checkSpeed(1079252848.8)
+compareLightSpeed(2079252848)
+compareLightSpeed(100071488)
+compareLightSpeed(1079252848.8)
 
 let product = "Боксерские перчатки"
 let price = 20
