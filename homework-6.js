@@ -33,15 +33,13 @@ carData.owner = personalData
 // если нет - добавляет его и задает значение, если есть - прекращает выполнение (ничего не делает)
 
 
-function checkMaxSpeed(obj) {
-    if (Object.hasOwn(obj, "maxSpeed")) {
-        return
-    } else {
+function availabilityOfMaxSpeed(obj) {
+    if (!Object.hasOwn(obj, "maxSpeed")) {
         obj.maxSpeed = 250
     }
 }
 
-checkMaxSpeed(carData)
+availabilityOfMaxSpeed(carData)
 
 // 6. Написать функцию, которая получает первым аргументом  — объект, а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
 
@@ -70,28 +68,26 @@ const gameList = [
         releaseDate: 2007,
         genre: "fighting"
     },
-
     {
         name: "Tekken 7",
         author: "Harada",
         releaseDate: 2017,
         genre: "fighting"
     },
-
     {
         name: "Tekken 8",
         author: "Harada",
         releaseDate: 2024,
         genre: "fighting"
     }
-]
+];
 
 gameList.push({
     name: "Mortal Kombat Komplete Edition",
     author: "Ed Boon",
     releaseDate: 2011,
     genre: "fighting"
-})
+});
 
 // 9. Создать еще один массив, состоящих из тех же книг, но относящийся к определенной вселенной (Гарри Поттер, Марвел и так далее).
 // (Если используете другую, свою сущность - импровизируйте). 
@@ -104,21 +100,19 @@ const mortalKombatCollection = [
         releaseDate: 2015,
         genre: "fighting"
     },
-
     {
         name: "Mortal Kombat 11",
         author: "Ed Boon",
         releaseDate: 2019,
         genre: "fighting"
     },
-
     {
         name: "Mortal Kombat 1",
         author: "Ed Boon",
         releaseDate: 2023,
         genre: "fighting"
     }
-]
+];
 
 const fullList = [...gameList, ...mortalKombatCollection]
 
@@ -129,12 +123,8 @@ const fullList = [...gameList, ...mortalKombatCollection]
 
 function addRareProperty(array) {
     array.map((item) => {
-        if (item.releaseDate > 2000) {
-            item.isRare = true
-        } else {
-            item.isRare = false
-        }
-    })
+        item.releaseDate > 2000 ? item.isRare = true : item.isRare = false
+    }
 }
 
 addRareProperty(fullList)
