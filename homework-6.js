@@ -125,6 +125,7 @@ function addRareProperty(array) {
     array.map((item) => {
         item.releaseDate > 2000 ? item.isRare = true : item.isRare = false
     }
+    )
 }
 
 addRareProperty(fullList)
