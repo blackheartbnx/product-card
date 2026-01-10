@@ -19,7 +19,7 @@ const personalData = {
 // Желательно добавлять отдельной строкой (имеется ввиду не при создании объекта)
 
 const carData = {
-    Make: "Audi",
+    brand: "Audi",
     model: "A8",
     yearOfManufacture: "2018",
     color: "Чёрный",
@@ -33,13 +33,13 @@ carData.owner = personalData
 // если нет - добавляет его и задает значение, если есть - прекращает выполнение (ничего не делает)
 
 
-function availabilityOfMaxSpeed(obj) {
-    if (!Object.hasOwn(obj, "maxSpeed")) {
+function checkMaxSpeed(obj) {
+    if (!Object.hasOwnProperty(obj, "maxSpeed")) {
         obj.maxSpeed = 250
     }
 }
 
-availabilityOfMaxSpeed(carData)
+checkMaxSpeed(carData)
 
 // 6. Написать функцию, которая получает первым аргументом  — объект, а вторым аргументом — свойство объекта, которое нужно вывести и выводит его значение.
 
@@ -122,10 +122,10 @@ const fullList = [...gameList, ...mortalKombatCollection]
 // Что я хочу этим сказать: если книга выпущена позже 2000 года, устанавливаем true (да, это редкий), нет - false (значит это не редкий).
 
 function addRareProperty(array) {
-    array.map((item) => {
-        item.releaseDate > 2000 ? item.isRare = true : item.isRare = false
-    }
-    )
+    return array.map(item => ({
+        ...item,
+        isRare: item.releaseDate > 2000
+    }));
 }
 
 addRareProperty(fullList)
