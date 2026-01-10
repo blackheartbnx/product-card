@@ -4,20 +4,10 @@ import { commentsInSocialNetworks } from "./comments.js";
 
 // Создать массив чисел от 1 до 10. Отфильтровать его таким образом, что бы мы получил массив чисел, начиная с 5.
 
-const nums = [
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10
-]
-const filtered = nums.filter(num => num >= 5);
-console.log(filtered)
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+const filteredNumbers = nums.filter(num => num >= 5);
+console.log(filteredNumbers)
 
 /* Создать массив строк, относящихся к любой сущности (название фильмов/книг, кухонные приборы, мебель и т.д.), 
 проверить, есть ли в массиве какая-то определенная сущность */
@@ -30,10 +20,10 @@ const movies = [
     "Мстители: Секретные войны"
 ];
 
-function checkACertainEntity(array, anyEntity) {
+function isEntityInArray(array, anyEntity) {
     return array.includes(anyEntity);
 }
-console.log(checkACertainEntity(movies, "Мстители"))
+console.log(isEntityInArray(movies, "Мстители"))
 
 /* Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный ("переворачивать").
 Два вышеуказанных массива с помощью этой функции перевернуть */
@@ -59,63 +49,63 @@ console.log(getCommentsWithComEmail(commentsInSocialNetworks))
 /* 8. Перебрать массив таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, а те, у кого id больше 5, 
 имели postId: 1 */
 
-function updatePostIdBasedOnId(commentsArray) {
+function getCommentsWithUpdatedPostId(commentsArray) {
     return commentsArray.map(comment => ({
         ...comment,
         postId: comment.id <= 5 ? 2 : 1
     }));
 }
-console.log(updatePostIdBasedOnId(commentsInSocialNetworks));
+console.log(getCommentsWithUpdatedPostId(commentsInSocialNetworks));
 
 // 9. Перебрать массив, что бы объекты состояли только из айди и имени
 
-function extractIdAndName(commentsArray) {
+function getIdNameArray(commentsArray) {
     return commentsArray.map(({ id, name }) => ({ id, name }));
 }
 
-console.log(extractIdAndName(commentsInSocialNetworks));
+console.log(getIdNameArray(commentsInSocialNetworks));
 
 /* 10. Перебираем массив, добавляем объектам свойство isInvalid и проверяем: 
 если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false. */
 
-function addInvalidStatus(commentsArray) {
+function checkCommentsAndReturnArray(commentsArray) {
     return commentsArray.map(comment => ({
         ...comment,
         isInvalid: comment.body.length > 180
     }));
 }
 
-console.log(addInvalidStatus(commentsInSocialNetworks));
+console.log(checkCommentsAndReturnArray(commentsInSocialNetworks));
 
 // Уровень 3:
 
 // 11. Почитать про метод массива reduce. Используя его, вывести массив почт и провернуть тоже самое с помощью метода map
 
-function getEmailsWithReduce(commentsArray) {
+function emailsArray(commentsArray) {
     return commentsArray.reduce((emails, comment) => [...emails, comment.email], []);
 }
-console.log(getEmailsWithReduce(commentsInSocialNetworks));
+console.log(emailsArray(commentsInSocialNetworks));
 
-function getEmailsWithMap(commentsArray) {
+function emailsArray(commentsArray) {
     return commentsArray.map(comment => comment.email);
 }
 
-console.log(getEmailsWithMap(commentsInSocialNetworks));
+console.log(emailsArray(commentsInSocialNetworks));
 
 // 12. Почитать про методы toString(), join() и перебрав массив с задания №11, привести его к строке.
 
 // toString()
 
-function convertEmailsToString(commentsArray) {
+function convertEmailsToStringAndReturnArray(commentsArray) {
     return commentsArray.map(comment => comment.email).toString();
 }
 
-console.log(convertEmailsToString(commentsInSocialNetworks));
+console.log(convertEmailsToStringAndReturnArray(commentsInSocialNetworks));
 
 // join()
 
-function convertEmailsToStringWithJoin(commentsArray) {
+function convertEmailsToStringWithJoinAndReturnArray(commentsArray) {
     return commentsArray.map(comment => comment.email).join(', ');
 }
 
-console.log(convertEmailsToStringWithJoin(commentsInSocialNetworks));
+console.log(convertEmailsToStringWithJoinAndReturnArray(commentsInSocialNetworks));
