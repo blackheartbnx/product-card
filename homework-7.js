@@ -28,11 +28,11 @@ console.log(isEntityInArray(movies, "Мстители"))
 /* Написать функцию, которая аргументом будет принимать массив и изменять его порядок на противоположный ("переворачивать").
 Два вышеуказанных массива с помощью этой функции перевернуть */
 
-function changeArrayOrder(array) {
+function reverseArray(array) {
     return array.reverse()
 }
-console.log(changeArrayOrder(movies))
-console.log(changeArrayOrder(nums))
+console.log(reverseArray(movies))
+console.log(reverseArray(nums))
 
 
 /* 6. Сделать константу экспортируемой, добавив перед "const" ключевое слово "export".
@@ -81,16 +81,16 @@ console.log(checkCommentsAndReturnArray(commentsInSocialNetworks));
 
 // 11. Почитать про метод массива reduce. Используя его, вывести массив почт и провернуть тоже самое с помощью метода map
 
-function emailsArray(commentsArray) {
+function outputEmailsArray(commentsArray) {
     return commentsArray.reduce((emails, comment) => [...emails, comment.email], []);
 }
-console.log(emailsArray(commentsInSocialNetworks));
+console.log(outputEmailsArray(commentsInSocialNetworks));
 
-function emailsArray(commentsArray) {
+function outputEmailsArray(commentsArray) {
     return commentsArray.map(comment => comment.email);
 }
 
-console.log(emailsArray(commentsInSocialNetworks));
+console.log(outputEmailsArray(commentsInSocialNetworks));
 
 // 12. Почитать про методы toString(), join() и перебрав массив с задания №11, привести его к строке.
 
