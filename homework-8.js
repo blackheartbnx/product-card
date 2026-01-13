@@ -8,7 +8,7 @@ const productList = document.getElementById('product-list');
 const displayProductCards = (productCards) => {
     productCards.forEach(productCard => {
         const productCardClone = productTemplate.content.cloneNode(true);
-        productCardClone.querySelector('.product-image').src = `/images/${productCard.img}.png`
+        productCardClone.querySelector('.product-image').src = `/images/${ productCard.img }.png`
         productCardClone.querySelector('.product-category').textContent = productCard.category
         productCardClone.querySelector('.product-name').textContent = productCard.name
         productCardClone.querySelector('.product-description').textContent = productCard.description
@@ -18,7 +18,7 @@ const displayProductCards = (productCards) => {
             li.textContent = item;
             productCompoundList.appendChild(li);
         });
-        productCardClone.querySelector('.product-price').innerHTML = `${productCard.price} &#8381`
+        productCardClone.querySelector('.product-price').innerHTML = `${ productCard.price } &#8381`
         productList.appendChild(productCardClone)
         console.log(productList)
     })

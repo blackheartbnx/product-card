@@ -85,7 +85,7 @@ body {
   list-style: circle;
 }
 
-.card-container>span {
+.card-container > span {
   display: block;
   margin-top: 5px;
 }
