@@ -2,17 +2,28 @@ import { productCards } from "./product-cards.js"
 
 // 3. По аналогии из лекции — создать и реализовать шаблон для продуктовых карточек.  (Посмотрите сразу задание 5)
 
-const cardContainers = document.querySelectorAll('.card-container');
+const productTemplate = document.getElementById('product-card-template');
+const productList = document.getElementById('product-list');
 
-const displaySelectedProductCards = (productCards) => {
-    cardContainers.forEach((card, index) => {
-        if (index < productCards.length) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
+const displayProductCards = (productCards) => {
+    productCards.forEach(productCard => {
+        const productCardClone = productTemplate.content.cloneNode(true);
+        productCardClone.querySelector('.product-image').src = `/images/${productCard.img}.png`
+        productCardClone.querySelector('.product-category').textContent = productCard.category
+        productCardClone.querySelector('.product-name').textContent = productCard.name
+        productCardClone.querySelector('.product-description').textContent = productCard.description
+        const productCompoundList = productCardClone.querySelector('.product-compound-list')
+        productCard.compound.forEach(item => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            productCompoundList.appendChild(li);
+        });
+        productCardClone.querySelector('.product-price').innerHTML = `${productCard.price} &#8381`
+        productList.appendChild(productCardClone)
+        console.log(productList)
+    })
 }
+
 // 4. Используя метод .reduce(), получить массив объектов, где ключем является название продукта, а значением - его описание
 
 const productCardsNameList = productCards.reduce((sum, productCard) => [...sum, productCard.name], [])
@@ -33,7 +44,7 @@ const askCardsCount = () => {
     const count = Number(input);
     if (count >= 1 && count <= 5) {
         const selectedProductCards = productCards.slice(0, count);
-        displaySelectedProductCards(selectedProductCards)
+        displayProductCards(selectedProductCards)
     }
 }
 

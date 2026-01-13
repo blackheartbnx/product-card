@@ -1,6 +1,6 @@
 export const productCards = [
     {
-        img: 'moisturizing_mousee',
+        img: 'moisturizing_mousse',
         category: 'для нормальной кожи',
         name: 'Увлажняющий мусс',
         description: 'Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.',

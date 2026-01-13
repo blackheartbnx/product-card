@@ -13,7 +13,7 @@
 </head>
 
 <body>
-  <!--КАРТОЧКА 1-->
+
   <button id="change-color-all-card">Сменить цвет всех карточек</button>
   <button id="change-color-first-card">Сменить цвет первой карточки</button>
   <button id="open-google">Открыть страницу Google.com</button>
@@ -41,7 +41,7 @@
         </div>
       </div>
 
-      <!--КАРТОЧКА 2-->
+
       <div class="card-container">
         <img src="./images/moisturizing_mask.png" alt="Увлажняющий мусс" />
         <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
@@ -61,7 +61,7 @@
         </div>
       </div>
 
-      <!--КАРТОЧКА 3-->
+
       <div class="card-container">
         <img src="./images/cleansing_gel.png" alt="Увлажняющий мусс" />
         <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
@@ -81,7 +81,7 @@
         </div>
       </div>
 
-      <!--КАРТОЧКА 4-->
+
       <div class="card-container">
         <img src="./images/gift_set1.png" alt="Увлажняющий мусс" />
         <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
@@ -101,7 +101,7 @@
         </div>
       </div>
 
-      <!--КАРТОЧКА 5-->
+
       <div class="card-container">
         <img src="./images/gift_set5.png" alt="Увлажняющий мусс" />
         <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
@@ -123,6 +123,22 @@
       </div>
     </div>
   </div>
+  <ul id="product-list" class="card-list-container"></ul>
+  <template id="product-card-template">
+    <li class="card-container">
+      <img class="product-image" width="290" height="245" alt="">
+      <span class="product-category"></span>
+      <p class="product-name"></p>
+      <p class="product-description"></p>
+      <span class="product-compound">Состав:</span>
+      <ul class="product-compound-list"></ul>
+      <div class="product-price-container">
+        <span class="product-price-label">Цена</span>
+        <span class="product-price"></span>
+      </div>
+    </li>
+  </template>
+  <script type="module" src="main.js"></script>
   <script type="module" src="homework-8.js"></script>
 </body>
 
