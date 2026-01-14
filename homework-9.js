@@ -6,13 +6,17 @@ let user = undefined
 при нажатии на которую мы будем выводить консоль лог в виде объекта: { email: 'введенная почта' } */
 
 const emailForm = document.querySelector('#email-form')
+function getFormData(form) {
+    const formData = new FormData(form);
+    return Object.fromEntries(formData.entries());
+}
+
 emailForm.addEventListener('submit', (event) => {
     event.preventDefault();
     const form = event.target;
-    const formData = new FormData(form)
-    const data = Object.fromEntries(formData.entries());
-    console.log(data)
-})
+    const data = getFormData(form);
+    console.log(data);
+});
 
 /* 5. Создать кнопку "Регистрация". Создать модальное окно, используя классы "modal, modal-showed". 
 Логика такая: при нажатии на кнопку у нас открывается модальное окно путем добавления modal-showed к div с классом modal.
