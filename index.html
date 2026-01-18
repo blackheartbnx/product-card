@@ -1,212 +1,271 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Card</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-</head>
-<body>
-  <button id="change-color-all-card">Сменить цвет всех карточек</button>
-  <button id="change-color-first-card">Сменить цвет первой карточки</button>
-  <button id="open-google">Открыть страницу Google.com</button>
-  <button id="output-console-log">Вывести сообщение в консоль лог</button>
-  <div class="container">
-    <img class="flowers" src="./images/flowers.png" alt="Цветы" />
-    <h1 class="main-title">Выбери свой продукт</h1>
-    <div class="cards">
-      <div class="card-container">
-        <img src="./images/moisturizing_mousse.png" alt="Увлажняющий мусс" />
-        <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
-        <h3 class="product-name">Увлажняющий мусс</h3>
-        <p class="product-description">
-          Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.
-        </p>
-        <span>Состав:</span>
-        <ul class="product-compoud">
-          <li class="product-compoud-item">активные натуральные комплексы</li>
-          <li class="product-compoud-item">витамины С, А, РР, В И Е</li>
-          <li class="product-compoud-item">солнцезащитные компоненты</li>
-        </ul>
-        <div class="product-price-container">
-          <span class="product-price-label">Цена</span>
-          <span class="product-price">2 750 &#8381;</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <button id="change-color-all-cards">Сменить цвет всех карточек</button>
+    <button id="change-color-first-card">Сменить цвет первой карточки</button>
+    <button id="open-google">Открыть страницу Google.com</button>
+    <button id="output-console-log">Вывести сообщение в консоль лог</button>
+    <div class="container">
+      <img class="flowers" src="./images/flowers.png" alt="Цветы" />
+      <h1 class="main-title">Выбери свой продукт</h1>
+      <div class="cards">
+        <div class="card-container">
+          <img src="./images/moisturizing_mousse.png" alt="Увлажняющий мусс" />
+          <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
+          <h3 class="product-name">Увлажняющий мусс</h3>
+          <p class="product-description">
+            Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.
+          </p>
+          <span>Состав:</span>
+          <ul class="product-compoud">
+            <li class="product-compoud-item">активные натуральные комплексы</li>
+            <li class="product-compoud-item">витамины С, А, РР, В И Е</li>
+            <li class="product-compoud-item">солнцезащитные компоненты</li>
+          </ul>
+          <div class="product-price-container">
+            <span class="product-price-label">Цена</span>
+            <span class="product-price">2 750 &#8381;</span>
+          </div>
         </div>
-      </div>
 
-      <div class="card-container">
-        <img src="./images/moisturizing_mask.png" alt="Увлажняющий мусс" />
-        <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
-        <h3 class="product-name">Увлажняющая маска</h3>
-        <p class="product-description">
-          Способствует удерживанию влаги в верхних слоях кожи.
-        </p>
-        <span>Состав:</span>
-        <ul class="product-compoud">
-          <li class="product-compoud-item">воски</li>
-          <li class="product-compoud-item">минералы</li>
-          <li class="product-compoud-item">масла</li>
-        </ul>
-        <div class="product-price-container">
-          <span class="product-price-label">Цена</span>
-          <span class="product-price">3 500 &#8381;</span>
+        <div class="card-container">
+          <img src="./images/moisturizing_mask.png" alt="Увлажняющий мусс" />
+          <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
+          <h3 class="product-name">Увлажняющая маска</h3>
+          <p class="product-description">
+            Способствует удерживанию влаги в верхних слоях кожи.
+          </p>
+          <span>Состав:</span>
+          <ul class="product-compoud">
+            <li class="product-compoud-item">воски</li>
+            <li class="product-compoud-item">минералы</li>
+            <li class="product-compoud-item">масла</li>
+          </ul>
+          <div class="product-price-container">
+            <span class="product-price-label">Цена</span>
+            <span class="product-price">3 500 &#8381;</span>
+          </div>
         </div>
-      </div>
 
-      <div class="card-container">
-        <img src="./images/cleansing_gel.png" alt="Увлажняющий мусс" />
-        <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
-        <h3 class="product-name">Гель для умывания</h3>
-        <p class="product-description">
-          Интенсивно очищает, не повреждает защитный барьер кожи.
-        </p>
-        <span>Состав:</span>
-        <ul class="product-compoud">
-          <li class="product-compoud-item">минералы</li>
-          <li class="product-compoud-item">витамины С, А, РР, В И Е</li>
-          <li class="product-compoud-item">солнцезащитные компоненты</li>
-        </ul>
-        <div class="product-price-container">
-          <span class="product-price-label">Цена</span>
-          <span class="product-price">1 650 &#8381;</span>
+        <div class="card-container">
+          <img src="./images/cleansing_gel.png" alt="Увлажняющий мусс" />
+          <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
+          <h3 class="product-name">Гель для умывания</h3>
+          <p class="product-description">
+            Интенсивно очищает, не повреждает защитный барьер кожи.
+          </p>
+          <span>Состав:</span>
+          <ul class="product-compoud">
+            <li class="product-compoud-item">минералы</li>
+            <li class="product-compoud-item">витамины С, А, РР, В И Е</li>
+            <li class="product-compoud-item">солнцезащитные компоненты</li>
+          </ul>
+          <div class="product-price-container">
+            <span class="product-price-label">Цена</span>
+            <span class="product-price">1 650 &#8381;</span>
+          </div>
         </div>
-      </div>
 
-      <div class="card-container">
-        <img src="./images/gift_set1.png" alt="Увлажняющий мусс" />
-        <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
-        <h3 class="product-name">Подарочный набор №1</h3>
-        <p class="product-description">
-          Набор, состоящий из увлажняющего крема и маски.
-        </p>
-        <span>Состав:</span>
-        <ul class="product-compoud">
-          <li class="product-compoud-item">воски</li>
-          <li class="product-compoud-item">минералы</li>
-          <li class="product-compoud-item">масла</li>
-        </ul>
-        <div class="product-price-container">
-          <span class="product-price-label">Цена</span>
-          <span class="product-price">4 750 &#8381;</span>
+        <div class="card-container">
+          <img src="./images/gift_set1.png" alt="Увлажняющий мусс" />
+          <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
+          <h3 class="product-name">Подарочный набор №1</h3>
+          <p class="product-description">
+            Набор, состоящий из увлажняющего крема и маски.
+          </p>
+          <span>Состав:</span>
+          <ul class="product-compoud">
+            <li class="product-compoud-item">воски</li>
+            <li class="product-compoud-item">минералы</li>
+            <li class="product-compoud-item">масла</li>
+          </ul>
+          <div class="product-price-container">
+            <span class="product-price-label">Цена</span>
+            <span class="product-price">4 750 &#8381;</span>
+          </div>
         </div>
-      </div>
 
-      <div class="card-container">
-        <img src="./images/gift_set5.png" alt="Увлажняющий мусс" />
-        <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
-        <h3 class="product-name">Подарочный набор №5</h3>
-        <p class="product-description">
-          Весь набор средств Invisible symphony, крем, маска, мусс и гель для
-          умывания.
-        </p>
-        <span>Состав:</span>
-        <ul class="product-compoud">
-          <li class="product-compoud-item">воски</li>
-          <li class="product-compoud-item">минералы</li>
-          <li class="product-compoud-item">масла</li>
-        </ul>
-        <div class="product-price-container">
-          <span class="product-price-label">Цена</span>
-          <span class="product-price">7 520 &#8381;</span>
+        <div class="card-container">
+          <img src="./images/gift_set5.png" alt="Увлажняющий мусс" />
+          <span class="product-category">ДЛЯ НОРМАЛЬНОЙ КОЖИ</span>
+          <h3 class="product-name">Подарочный набор №5</h3>
+          <p class="product-description">
+            Весь набор средств Invisible symphony, крем, маска, мусс и гель для
+            умывания.
+          </p>
+          <span>Состав:</span>
+          <ul class="product-compoud">
+            <li class="product-compoud-item">воски</li>
+            <li class="product-compoud-item">минералы</li>
+            <li class="product-compoud-item">масла</li>
+          </ul>
+          <div class="product-price-container">
+            <span class="product-price-label">Цена</span>
+            <span class="product-price">7 520 &#8381;</span>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <ul id="product-list" class="card-list-container"></ul>
-  <template id="product-card-template">
-    <li class="card-container">
-      <img class="product-image" width="290" height="245" alt="">
-      <span class="product-category"></span>
-      <p class="product-name"></p>
-      <p class="product-description"></p>
-      <span class="product-compound">Состав:</span>
-      <ul class="product-compound-list"></ul>
-      <div class="product-price-container">
-        <span class="product-price-label">Цена</span>
-        <span class="product-price"></span>
-      </div>
-    </li>
-  </template>
+    <ul id="product-list" class="card-list-container"></ul>
+    <template id="product-card-template">
+      <li class="card-container">
+        <img class="product-image" width="290" height="245" alt="" />
+        <span class="product-category"></span>
+        <p class="product-name"></p>
+        <p class="product-description"></p>
+        <span class="product-compound">Состав:</span>
+        <ul class="product-compound-list"></ul>
+        <div class="product-price-container">
+          <span class="product-price-label">Цена</span>
+          <span class="product-price"></span>
+        </div>
+      </li>
+    </template>
 
-  <!-- Создание формы -->
+    <!-- Создание формы -->
 
     <form class="registration-form" id="regForm">
-        <label for="firstName">Имя:</label>
-        <input type="text" id="firstName" name="firstName" placeholder="Имя" required>
-        <label for="lastName">Фамилия:</label>
-        <input type="text" id="lastName" name="lastName" placeholder="Фамилия" required>
-        <label for="birthDate">Дата рождения:</label>
-        <input type="date" id="birthDate" name="birthDate" placeholder="Дата рождения" required>
-        <label for="login">Логин:</label>
-        <input type="text" id="registr-login" name="login" placeholder="Логин" required>
-        <label for="password">Пароль:</label>
-        <input type="password" id="registr-password" name="password" placeholder="Пароль" required>
-        <label for="confirmPassword">Повторение пароля:</label>
-        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" required>
-        <button type="submit">Регистрация</button>
+      <label for="firstName">Имя:</label>
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="Имя"
+        required
+      />
+      <label for="lastName">Фамилия:</label>
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        placeholder="Фамилия"
+        required
+      />
+      <label for="birthDate">Дата рождения:</label>
+      <input
+        type="date"
+        id="birthDate"
+        name="birthDate"
+        placeholder="Дата рождения"
+        required
+      />
+      <label for="login">Логин:</label>
+      <input
+        type="text"
+        id="registr-login"
+        name="login"
+        placeholder="Логин"
+        required
+      />
+      <label for="password">Пароль:</label>
+      <input
+        type="password"
+        id="registr-password"
+        name="password"
+        placeholder="Пароль"
+        required
+      />
+      <label for="confirmPassword">Повторение пароля:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        placeholder="Повторите пароль"
+        required
+      />
+      <button type="submit">Регистрация</button>
     </form>
 
     <!-- Кнопка аутентификация -->
 
-    <button class="auth-btn" id="openModalBtn" type="submit">Аутентификация</button>
+    <button class="auth-btn" id="openModalBtn" type="submit">
+      Аутентификация
+    </button>
     <div class="modal" id="modal">
-        <div class="overlay"></div>
-        <div class="modal-content" id="checkModalBtn">
-            <button class="close-btn" id="closeModalBtn">&times;</button>
-            <h2>Вход в систему</h2>
-            <form id="loginForm" class="isOpen">
-                <label for="login" class="auth-label">Логин:</label>
-                <input type="text" id="login" name="login" class="auth-input" required>
-                <label for="password" class="auth-label">Пароль:</label>
-                <input type="password" id="password" name="password" class="auth-input" required>
-                <button type="submit">Войти</button>
-            </form>
-            <div id="message" class="message"></div>
-        </div>
+      <div class="overlay"></div>
+      <div class="modal-content" id="checkModalBtn">
+        <button class="close-btn" id="closeModalBtn">&times;</button>
+        <h2>Вход в систему</h2>
+        <form id="loginForm" class="isOpen">
+          <label for="login" class="auth-label">Логин:</label>
+          <input
+            type="text"
+            id="login"
+            name="login"
+            class="auth-input"
+            required
+          />
+          <label for="password" class="auth-label">Пароль:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            class="auth-input"
+            required
+          />
+          <button type="submit">Войти</button>
+        </form>
+        <div id="message" class="message"></div>
+      </div>
     </div>
 
     <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-left">
-                <h1 class="footer-title">Product Cards</h1>
-                <p class="footer-description">У Нас Самые Лучшие Продукты Для Кожи!</p>
-                <div class="footer-icons">
-                    <img src="/assets/tg_icon.svg" class="icon-tg">
-                    <img src="/assets/vk_icon.svg" class="icon-vk">
-                </div>
-            </div>
-            <form class="form" id="email-form">
-                <p class="form-title">Подпишись на наши акции:</p>
-                <div class="form-input-btn">
-                    <input class="form-input" placeholder="Введи email..." name="email" type="email" id="email"
-                        required>
-                    <hr class="line-btn">
-                    <button class="form-button" type="submit">Подписаться</button>
-                </div>
-                <hr class="line-website">
-                <p class="website">www.product-cards©all right reserve</p>
-            </form>
-            <nav class="footer-right">
-                <span class="footer-right-title">Быстрые ссылки</span>
-                <ul class="social-links">
-                    <li>
-                      <a href="#">Главная</a>
-                    </li>
-                    <li>
-                      <a href="#">Магазин</a>
-                    </li>
-                    <li>
-                      <a href="#">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
+      <div class="footer-container">
+        <div class="footer-left">
+          <h1 class="footer-title">Product Cards</h1>
+          <p class="footer-description">
+            У Нас Самые Лучшие Продукты Для Кожи!
+          </p>
+          <div class="footer-icons">
+            <img src="/assets/tg_icon.svg" class="icon-tg" />
+            <img src="/assets/vk_icon.svg" class="icon-vk" />
+          </div>
         </div>
+        <form class="form" id="email-form">
+          <p class="form-title">Подпишись на наши акции:</p>
+          <div class="form-input-btn">
+            <input
+              class="form-input"
+              placeholder="Введи email..."
+              name="email"
+              type="email"
+              id="email"
+              required
+            />
+            <hr class="line-btn" />
+            <button class="form-button" type="submit">Подписаться</button>
+          </div>
+          <hr class="line-website" />
+          <p class="website">www.product-cards©all right reserve</p>
+        </form>
+        <nav class="footer-right">
+          <span class="footer-right-title">Быстрые ссылки</span>
+          <ul class="social-links">
+            <li>
+              <a href="#">Главная</a>
+            </li>
+            <li>
+              <a href="#">Магазин</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </footer>
-  <script type="module" src="homework-9.js"></script>
-</body>
+    <script type="module" src="main.js"></script>
+  </body>
 </html>
