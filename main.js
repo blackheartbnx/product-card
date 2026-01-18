@@ -11,13 +11,13 @@ import { Car, DieselCar } from "./homework-10/Car.js";
 // Покраска всех карточек
 
 const productCards = document.querySelectorAll(".card-container");
-const changeColorAllCardButton = document.querySelector(
-  "#change-color-all-card",
+const AllCardsColorChangeButton = document.querySelector(
+  "#change-color-all-cards",
 );
 const greenColorHash = "#00FF00";
 const blueColorHash = "#0000FF";
 
-changeColorAllCardButton.addEventListener("click", () => {
+AllCardsColorChangeButton.addEventListener("click", () => {
   productCards.forEach((card) => (card.style.backgroundColor = greenColorHash));
 });
 
@@ -25,7 +25,7 @@ changeColorAllCardButton.addEventListener("click", () => {
 
 const firstProductCard = document.querySelector(".card-container");
 const changeColorFirstCardButton = document.querySelector(
-  "#change-color-first-card",
+  "#change-color-first-cards",
 );
 
 changeColorFirstCardButton.addEventListener("click", () => {
@@ -34,17 +34,13 @@ changeColorFirstCardButton.addEventListener("click", () => {
 
 // Открыть google
 
-const openGoogleButton = document.querySelector("#open-google");
+const googleOpenButton = document.querySelector("#open-google");
 
-openGoogleButton.addEventListener("click", openGoogle);
+googleOpenButton.addEventListener("click", openGoogle);
 
 function openGoogle() {
-  const answer = confirm("Вы действительно хотите открыть Google?");
-
-  if (answer === true) {
+  if (confirm("Вы действительно хотите открыть Google?")) {
     window.open("https://google.com");
-  } else {
-    return;
   }
 }
 
@@ -62,60 +58,74 @@ function outputLog(message) {
 
 let user = null;
 
-const authModal = new Modal("modal");
+function initializeAuthModal() {
+  const authModal = new Modal("modal");
+  const modalElements = {
+    openButton: document.querySelector("#openModalBtn"),
+    checkButton: document.querySelector("#checkModalBtn"),
+    closeButton: document.querySelector("#closeModalBtn")
+  };
+  
+  modalElements.openButton.addEventListener("click", () => authModal.open());
+  modalElements.checkButton.addEventListener("click", () => {
+    console.log("Модальное окно открыто:", authModal.isOpen());
+  });
+  modalElements.closeButton.addEventListener("click", () => authModal.close());
+  
+  return { modal: authModal, elements: modalElements };
+}
 
-const authBtn = document.querySelector("#openModalBtn");
-authBtn.addEventListener("click", () => {
-  authModal.open();
-});
+const { modal: authModal } = initializeAuthModal();
 
-const checkModalBtn = document.querySelector("#checkModalBtn");
-checkModalBtn.addEventListener("click", () => {
-  console.log("Модальное окно открыто:", authModal.isOpen());
-});
+function initializeRegistrationForm(modal) {
+  const regForm = new Form("regForm");
+  
+  regForm.form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!regForm.isValid()) return;
+    
+    const formData = regForm.getValues();
+    if (formData.password !== formData.confirmPassword) {
+      console.log("Регистрация отклонена!");
+      return;
+    }
 
-const closeBtn = document.querySelector("#closeModalBtn");
-closeBtn.addEventListener("click", () => {
-  authModal.close();
-});
+    user = formData;
+    user.createdOn = new Date();
+    console.log("Пользователь зарегистрирован:", user);
 
-const regForm = new Form("regForm");
-
-regForm.form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  if (!regForm.isValid()) return;
-  const formData = regForm.getValues();
-  if (formData.password !== formData.confirmPassword) {
-    console.log("Регистрация отклонена!");
-    return;
-  }
-
-  user = formData;
-  user.createdOn = new Date();
-  console.log("Пользователь зарегистрирован:", user);
-
-  regForm.reset();
-  const closeModalBtn = document.querySelector("#closeModalBtn");
-  closeModalBtn.addEventListener("click", authModal.close());
-});
+    regForm.reset();
+    const closeModalBtn = document.querySelector("#closeModalBtn");
+    closeModalBtn.addEventListener("click", () => modal.close());
+  });
+  
+  return regForm;
+}
+const regForm = initializeRegistrationForm(authModal);
 
 const loginForm = new Form("loginForm");
 const messageEl = document.getElementById("message");
 
-loginForm.form.addEventListener("submit", (event) => {
-  event.preventDefault();
+function initializeLoginForm() {
+  loginForm.form.addEventListener("submit", (event) => {
+    event.preventDefault();
 
-  if (!loginForm.isValid()) return;
-  const { login, password } = loginForm.getValues();
-  if (user && login === user.login && password === user.password) {
-    user.lastLogin = new Date();
-    messageEl.style.color = "green";
-    messageEl.textContent = "Успешный вход!";
-  } else {
-    messageEl.style.color = "red";
-    messageEl.textContent = "Неверный логин или пароль";
-  }
-});
+    if (!loginForm.isValid()) return;
+    const { login, password } = loginForm.getValues();
+    if (user && login === user.login && password === user.password) {
+      user.lastLogin = new Date();
+      messageEl.style.color = "green";
+      messageEl.textContent = "Успешный вход!";
+    } else {
+      messageEl.style.color = "red";
+      messageEl.textContent = "Неверный логин или пароль";
+    }
+  });
+  
+  return loginForm;
+}
+
+const initializedLoginForm = initializeLoginForm();
 
 const audi = new Car("audi", "2018", "70000");
 audi.buy();
