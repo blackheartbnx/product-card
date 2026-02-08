@@ -7,6 +7,10 @@ import "./homework-9.js";
 import { Modal } from "./homework-10/Modal.js";
 import { Form } from "./homework-10/Form.js";
 import { Car, DieselCar } from "./homework-10/Car.js";
+import {Cafe} from './homework-11/Cafe.js'
+import {Tea} from './homework-11/Drink.js'
+import {Coffee} from './homework-11/Drink.js'
+import {Cocktail} from './homework-11/Drink.js'
 
 // Покраска всех карточек
 
