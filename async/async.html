@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Async Users</title>
+  <link rel="stylesheet" href="async.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Пользователи</h1>
+    <p id="status" class="status">Данные загружаются</p>
+    <div id="user-list" class="user-list">
+    <template id="user-card-template">
+      <li class="user-card">
+        <img class="user-img" width="290" height="245" alt="">
+        <p class="user-id"></p>
+        <p class="user-name"></p>
+        <p class="user-surname"></p>
+        <p class="user-email"></p>
+        <p class="user-age"></p>
+        <button class="delete-one-card-btn" data-userId="">Удалить карточку</button>
+      </li>
+    </template>
+    </div>
+    <div class="buttons">
+      <button id="get-all-card-btn" class="btn">Получить все карточки</button>
+      <button id="delete-all-card-btn" class="btn">Удалить все карточки</button>
+    </div>
+  </div>
+  <script src="async.js"></script>
+</body>
+</html>
