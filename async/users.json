@@ -1,0 +1,28 @@
+{
+    "users": [
+        {
+            "img": "granta",
+            "id": 1,
+            "name": "Иван",
+            "surname": "Янов",
+            "email": "ivanrogatiy@mail.ru",
+            "age": 24
+        },
+        {
+            "img": "ferrari",
+            "id": 2,
+            "name": "Виктор",
+            "surname": "Зернов",
+            "email": "zernovka@mail.ru",
+            "age": 25
+        },
+        {
+            "img": "audi",
+            "id": 3,
+            "name": "Владислав",
+            "surname": "Смирнов",
+            "email": "smirni@mail.ru",
+            "age": 60
+        }
+    ]
+}
